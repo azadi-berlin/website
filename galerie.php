@@ -468,7 +468,7 @@ include 'inc.header.php';
 				const itemWidthu = carouselu.querySelector('.carousel-item-u').offsetWidth;
 				const maxScrollu = (carouselu.children.length - 4) * itemWidthu; // 4 visible items
 		
-				scrollPositionu += directionu * itemWidthu * 4;
+				scrollPositionu += directionu * itemWidthu;
 		
 				if (scrollPositionu < 0) {
 					scrollPositionu = 0;
