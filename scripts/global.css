@@ -449,7 +449,47 @@
   cursor: pointer;
 }
 
+.carousel-item-u {
+  position: relative;
+  display: inline-block;
+}
 
+.carousel-item-u img {
+  transition: box-shadow 0.3s ease;
+}
+
+.carousel-item-u:hover img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-item-u:hover div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+
+}
+
+.download-btn {
+  display: none;
+  transition: background-color 0.3s ease;
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.carousel-item-u:hover .download-btn {
+  display: block;
+}
+
+.download-btn:hover {
+  background-color: #666;
+}
 
 /* Carousel container Material - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 .carousel-container-u {

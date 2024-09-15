@@ -278,48 +278,26 @@ include 'inc.header.php';
 		<!-- Carousel Block -->
 		<div class="carousel-container-u">
 			<div class="carousel-u" id="carousel-u">
-				<div class="carousel-item-u">
-					<a href="https://example.com/link2">
-						<img src="images/vorlage_image220x220.png" alt="Bild 1">
-					</a>
-				</div>
-				<div class="carousel-item-u" id="bildContainer">
-					<img src="images/vorlage_image220x220.png" alt="Bild 2" id="bild" onmouseover="changeImage(true)" onmouseout="changeImage(false)">
-					<div class="buttonContainer" id="buttonContainer" onmouseover="changeImage(true)" onmouseout="changeImage(false)">
-						<img src="images/download_bild.png" alt="Bild herunterladen" style="height:40px; margin-left:12px;" onclick="downloadImage()">
-						<img src="images/download_datei.png" alt="Zip-Datei herunterladen" style="height:40px; margin-top:12px;" onclick="downloadZip()">
-					</div>
-				</div>
-				<div class="carousel-item-u">
-					<a href="https://example.com/link3">
-						<img src="images/vorlage_image220x220.png" alt="Bild 3">
-					</a>
-				</div>
-				<div class="carousel-item-u">
-					<a href="https://example.com/link4">
-						<img src="images/vorlage_image220x220.png" alt="Bild 4">
-					</a>
-				</div>
-				<div class="carousel-item-u">
-					<a href="https://example.com/link5">
-						<img src="images/vorlage_image220x220.png" alt="Bild 5">
-					</a>
-				</div>
-				<div class="carousel-item-u">
-					<a href="https://example.com/link6">
-						<img src="images/vorlage_image220x220.png" alt="Bild 6">
-					</a>
-				</div>
-				<div class="carousel-item-u">
-					<a href="https://example.com/link7">
-						<img src="images/vorlage_image220x220.png" alt="Bild 7">
-					</a>
-				</div>
-				<div class="carousel-item-u">
-					<a href="https://example.com/link8">
-						<img src="images/vorlage_image220x220.png" alt="Bild 8">
-					</a>
-				</div>
+				<script>
+                fetch('content/materials.json')
+                    .then(response => response.json())
+                    .then(materials => {
+                        const carousel = document.getElementById('carousel-u');
+                        materials.forEach(material => {
+                            const item = document.createElement('div');
+                            item.className = 'carousel-item-u';
+                            item.innerHTML = `
+                                <img src="${material.imageUrl}" alt="${material.title}">
+                                <div style="position:absolute">
+                                    <button class="download-btn" onclick="downloadImage('${material.imageUrl}')">Download Bild</button>
+                                    <button class="download-btn" onclick="downloadZip('${material.imageUrl}')">Download Detei</button>
+                                </div>
+                            `;
+                            carousel.appendChild(item);
+                        });
+                    })
+                    .catch(error => console.error('Error loading materials:', error));
+                </script>
 			</div><br />
 			<div class="carousel-buttons-u" >
 				<button class="carousel-btn-u prev-u" onclick="scrollCarouselu(-1)">❮</button>
@@ -540,26 +518,6 @@ include 'inc.header.php';
 				link.click();
 				document.body.removeChild(link);
 			}
-		
-			// Funktion, um das Bild temporär auszutauschen
-			function changeImage(hover) {
-				var bild = document.getElementById('bild');
-				if (hover) {
-					bild.src = 'images/vorlage_image220x220_dunkel.png'; // Pfad zum dunklen Bild
-				} else {
-					bild.src = 'images/vorlage_image220x220.png'; // Pfad zum normalen Bild
-				}
-			}
-		
-			// Eventlistener, um die Buttons anzuzeigen, wenn die Maus über dem Bild ist
-			document.getElementById('bildContainer').addEventListener('mouseover', function() {
-				document.getElementById('buttonContainer').style.display = 'block';
-			});
-		
-			// Eventlistener, um die Buttons auszublenden, wenn die Maus das Bild verlässt
-			document.getElementById('bildContainer').addEventListener('mouseout', function() {
-				document.getElementById('buttonContainer').style.display = 'none';
-			});
 		</script>
 		
 	</div>
