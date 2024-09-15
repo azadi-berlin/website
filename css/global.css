@@ -1,0 +1,22 @@
+body {
+    background: #1A1A1A;
+}
+
+.header {
+    background: #1A1A1A;
+}
+
+.max-width {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.short-width-text {
+    max-width: 72ch;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
