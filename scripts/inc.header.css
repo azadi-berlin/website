@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://www.azadi-berlin.de/pre/fonts/Roboto-Medium.eot'); /* IE9 Compat Modes */
+  src: url('https://www.azadi-berlin.de/pre/fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('https://www.azadi-berlin.de/pre/fonts/Roboto-Medium.svg#Roboto-Medium') format('svg'), /* Legacy iOS */
+     url('https://www.azadi-berlin.de/pre/fonts/Roboto-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('https://www.azadi-berlin.de/pre/fonts/Roboto-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+     url('https://www.azadi-berlin.de/pre/fonts/Roboto-Medium.woff2') format('woff2'); /* Super Modern Browsers */
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://www.azadi-berlin.de/pre/fonts/Roboto-Black.eot'); /* IE9 Compat Modes */
+  src: url('https://www.azadi-berlin.de/pre/fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('https://www.azadi-berlin.de/pre/fonts/Roboto-Black.svg#Roboto-Black') format('svg'), /* Legacy iOS */
+     url('https://www.azadi-berlin.de/pre/fonts/Roboto-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('https://www.azadi-berlin.de/pre/fonts/Roboto-Black.woff') format('woff'), /* Pretty Modern Browsers */
+     url('https://www.azadi-berlin.de/pre/fonts/Roboto-Black.woff2') format('woff2'); /* Super Modern Browsers */
+}
+@font-face {
+  font-family: 'ArchivoBlack';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://www.azadi-berlin.de/pre/fonts/ArchivoBlack-Regular.eot'); /* IE9 Compat Modes */
+  src: url('https://www.azadi-berlin.de/pre/fonts/ArchivoBlack-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('https://www.azadi-berlin.de/pre/fonts/ArchivoBlack-Regular.svg#ArchivoBlack') format('svg'), /* Legacy iOS */
+     url('https://www.azadi-berlin.de/pre/fonts/ArchivoBlack-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('https://www.azadi-berlin.de/pre/fonts/ArchivoBlack-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+     url('https://www.azadi-berlin.de/pre/fonts/ArchivoBlack-Regular.woff2') format('woff2'); /* Super Modern Browsers */
+}
+
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #191919;
+  /* position: fixed; */
+  padding: 10px 20px;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.logodiv {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 114px;
+}
+
+.nav-items {
+  align-items: flex-end;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  max-width: 100%;
+}
+
+.nav-items img {
+  max-height: 44px;
+}
